@@ -4,7 +4,7 @@ console.log("My Rock, Paper, Scissors Program \n by Jeffrey");
 function getComputerChoice
     return random(rock,paper,scissors)
 
-function singleRound(playerSelection,computerSelection)
+function playRound(playerSelection,computerSelection)
     if playerSelection == rock AND computerSelection == paper
         print "You Lose! Paper beats Rock!"
     else if playerSelection == rock AND computerSelection == scissors
@@ -23,4 +23,9 @@ function singleRound(playerSelection,computerSelection)
         print "You Win! Scissors beats Paper!"
     else if playerSelection == scissors AND computerSelection == scissors
         print "It's a draw!"
+
+playerSelection = input("Rock, Paper or Scissors?")
+computerSelection = getComputerChoice()
+
+
 */
