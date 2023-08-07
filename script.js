@@ -1,5 +1,3 @@
-console.log("My Rock, Paper, Scissors Program \n by Jeffrey");
-
 /*
 function getComputerChoice()
     return random(rock,paper,scissors)
@@ -50,6 +48,20 @@ playerSelection = input("Rock, Paper or Scissors?")
 computerSelection = getComputerChoice()
 playerScore = 0
 computerScore = 0
-
-
 */
+console.log("My Rock, Paper, Scissors Program \n by Jeffrey");
+
+function getComputerChoice() {
+    let randomNumber = Math.floor(Math.random() * 3) + 1;
+    let choice;
+
+    if (randomNumber == 1) {
+        choice = "rock";
+    } else if (randomNumber == 2) {
+        choice = "paper";
+    } else {
+        choice = "scissors";
+    }
+
+    return choice;
+}
