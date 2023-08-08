@@ -77,16 +77,22 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "It's a draw!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
+        computerScore += 1;
         return "You Lose! Paper beats Rock!"
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        playerScore += 1;
         return "You Win! Rock beats Scissors!"
     } else if (playerSelection == "paper" && computerSelection == "rock") {
+        playerScore += 1;
         return "You Win! Paper beats Rock!"
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        computerScore += 1;
         return "You Lose! Scissors beats Paper!"
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        computerScore += 1;
         return "You Lose! Rock beats Scissors!"
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        playerScore += 1;
         return "You Win! Scissors beats Paper!"
     }
 }
@@ -106,5 +112,7 @@ function game() {
 
 let playerSelection;
 let computerSelection;
+let playerScore;
+let computerScore;
 
 game();
