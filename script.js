@@ -86,7 +86,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = "RoCk";
-let computerSelection = getComputerChoice();
+function game() {
+    console.log(playRound(playerSelection,computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
+}
 
-console.log(playRound(playerSelection,computerSelection));
+let playerSelection = prompt("Rock, Paper, or Scissors?");
+let computerSelection = getComputerChoice();
