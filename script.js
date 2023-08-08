@@ -102,12 +102,23 @@ function showChoices(playerSelection,computerSelection) {
     console.log(`Computer Choice: ${computerSelection}`);
 }
 
+function showWinner(playerScore,computerScore) {
+    if (playerScore > computerScore) {
+        return `You have ${playerScore} points compared to ${computerScore} points. You've won!`;
+    } else if (playerScore < computerScore) {
+        return `You have ${playerScore} points compared to ${computerScore} points. You've lost!`;
+    } else {
+        return `You have ${playerScore} points compared to ${computerScore} points. It's a draw!`;
+    }
+}
+
 function game() {
     console.log(playRound(playerSelection,computerSelection));
     console.log(playRound(playerSelection,computerSelection));
     console.log(playRound(playerSelection,computerSelection));
     console.log(playRound(playerSelection,computerSelection));
     console.log(playRound(playerSelection,computerSelection));
+    console.log(showWinner(playerScore,computerScore));
 }
 
 let playerSelection;
