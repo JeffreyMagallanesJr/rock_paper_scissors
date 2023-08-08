@@ -123,7 +123,7 @@ function game() {
 
 let playerSelection;
 let computerSelection;
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 
 game();
