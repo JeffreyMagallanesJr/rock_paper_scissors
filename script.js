@@ -72,6 +72,8 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
 
+    console.log(`Round ${roundNumber}! Fight!`);
+    roundNumber++;
     showChoices(playerSelection,computerSelection);
 
     if (playerSelection == computerSelection) {
@@ -125,5 +127,6 @@ let playerSelection;
 let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
+let roundNumber = 1;
 
 game();
