@@ -72,6 +72,8 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
 
+    showChoices(playerSelection,computerSelection);
+
     if (playerSelection == computerSelection) {
         return "It's a draw!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
@@ -87,6 +89,11 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
         return "You Win! Scissors beats Paper!"
     }
+}
+
+function showChoices(playerSelection,computerSelection) {
+    console.log(`Player Choice: ${playerSelection}`);
+    console.log(`Computer Choice: ${computerSelection}`);
 }
 
 function game() {
