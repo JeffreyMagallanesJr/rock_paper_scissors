@@ -63,15 +63,6 @@ function showWinner(playerScore,computerScore) {
     }
 }
 
-function game() {
-    console.log(playRound(playerSelection,computerSelection));
-    console.log(playRound(playerSelection,computerSelection));
-    console.log(playRound(playerSelection,computerSelection));
-    console.log(playRound(playerSelection,computerSelection));
-    console.log(playRound(playerSelection,computerSelection));
-    console.log(showWinner(playerScore,computerScore));
-}
-
 let playerSelection;
 let computerSelection;
 let playerScore = 0;
