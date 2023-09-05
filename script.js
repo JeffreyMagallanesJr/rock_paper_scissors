@@ -27,25 +27,25 @@ function playRound(selection) {
     showChoices(playerSelection,computerSelection);
 
     if (playerSelection == computerSelection) {
-        console.log("It's a draw!");
+        results.innerText += "\nIt's a draw!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
         computerScore += 1;
-        console.log("You Lose! Paper beats Rock!");
+        results.innerText += "\nYou Lose! Paper beats Rock!";
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
         playerScore += 1;
-        console.log("You Win! Rock beats Scissors!");
+        results.innerText += "\nYou Win! Rock beats Scissors!";
     } else if (playerSelection == "paper" && computerSelection == "rock") {
         playerScore += 1;
-        console.log("You Win! Paper beats Rock!");
+        results.innerText += "\nYou Win! Paper beats Rock!";
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
         computerScore += 1;
-        console.log("You Lose! Scissors beats Paper!");
+        results.innerText += "\nYou Lose! Scissors beats Paper!";
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
         computerScore += 1;
-        console.log("You Lose! Rock beats Scissors!");
+        results.innerText += "\nYou Lose! Rock beats Scissors!";
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
         playerScore += 1;
-        console.log("You Win! Scissors beats Paper!");
+        results.innerText += "\nYou Win! Scissors beats Paper!";
     }
 }
 
@@ -73,6 +73,7 @@ let roundNumber = 1;
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
+const results = document.querySelector('.results');
 
 rock.addEventListener('click', () => playRound("rock"));
 paper.addEventListener('click', () => playRound("paper"));
