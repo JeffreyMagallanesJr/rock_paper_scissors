@@ -53,6 +53,8 @@ function playRound(selection) {
         player_score_display.innerText = `Player Score: ${playerScore}`;
         results.innerText += "\nYou Win! Scissors beats Paper!";
     }
+
+    showWinner(playerScore,computerScore)
 }
 
 function showChoices(playerSelection,computerSelection) {
@@ -61,12 +63,11 @@ function showChoices(playerSelection,computerSelection) {
 }
 
 function showWinner(playerScore,computerScore) {
-    if (playerScore > computerScore) {
-        return `You have ${playerScore} points compared to ${computerScore} points. You've won!`;
-    } else if (playerScore < computerScore) {
-        return `You have ${playerScore} points compared to ${computerScore} points. You've lost!`;
-    } else {
-        return `You have ${playerScore} points compared to ${computerScore} points. It's a draw!`;
+    if (playerScore == 5) {
+        results.innerText += '\nYou reached 5 points first! You Win!';
+    }
+    if (computerScore == 5) {
+        results.innerText += '\nComputer reached 5 points first! You Lose!';
     }
 }
 
